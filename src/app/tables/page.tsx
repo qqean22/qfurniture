@@ -2,7 +2,7 @@ import { getProducts } from "@/lib/data";
 import { ProductCard } from "@/components/ProductCard";
 
 export const metadata = {
-  title: "Tables | QFurniture",
+  title: "Tables | Quality Furniture Ltd",
   description: "Discover our range of stylish and functional tables for commercial and residential use.",
 };
 

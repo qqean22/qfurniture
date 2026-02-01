@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: PageProps) {
   const categories = await getCategories();
   const cat = categories.find((c) => c.slug === slug && c.parent_id);
   return {
-    title: cat ? `${cat.name} | QFurniture` : "Chairs | QFurniture",
+    title: cat ? `${cat.name} | Quality Furniture Ltd` : "Chairs | Quality Furniture Ltd",
   };
 }
 

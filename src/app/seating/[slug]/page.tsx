@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const copy = seatingCopy[slug];
   return {
-    title: copy ? `${copy.title} | QFurniture` : "Seating | QFurniture",
+    title: copy ? `${copy.title} | Quality Furniture Ltd` : "Seating | Quality Furniture Ltd",
   };
 }
 

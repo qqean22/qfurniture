@@ -2,7 +2,7 @@ import { getProducts } from "@/lib/data";
 import { ProductCard } from "@/components/ProductCard";
 
 export const metadata = {
-  title: "Table Legs | QFurniture",
+  title: "Table Legs | Quality Furniture Ltd",
   description: "Table legs and bases for commercial and residential furniture.",
 };
 

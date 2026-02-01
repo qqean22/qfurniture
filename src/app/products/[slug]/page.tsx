@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
   const product = await getProductBySlug(slug);
   return {
-    title: product ? `${product.name} | QFurniture` : "Product | QFurniture",
+    title: product ? `${product.name} | Quality Furniture Ltd` : "Product | Quality Furniture Ltd",
     description: product?.short_description ?? undefined,
   };
 }

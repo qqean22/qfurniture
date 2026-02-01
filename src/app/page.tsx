@@ -6,6 +6,7 @@ import { VenueTypeCard } from "@/components/VenueTypeCard";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ProductImageCard } from "@/components/ProductImageCard";
 
+import heroImage from "@/images/hero-i.jpg";
 import img01 from "@/images/01-i.jpg";
 import img02 from "@/images/02-i.jpg";
 import img03 from "@/images/03-i.jpg";
@@ -27,17 +28,17 @@ export default async function HomePage() {
 
   return (
     <div>
-      {/* Hero section - matches reference: large hero with interior-style background, centered QFURNITURE + underline */}
+      {/* Hero section – background: hero-i.jpg */}
       <section
         className="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(180deg, rgba(232,224,220,0.92) 0%, rgba(212,200,194,0.9) 40%, rgba(45,45,45,0.85) 75%, rgba(26,26,26,0.9) 100%), url(https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920)",
+          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.4) 100%), url(${heroImage.src})`,
         }}
       >
         <div className="absolute inset-0 bg-black/25" aria-hidden />
         <div className="relative z-10">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight text-white drop-shadow-md">
-            QFurniture
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight text-white drop-shadow-md">
+            Quality Furniture Ltd
           </h1>
           <div className="mt-4 mx-auto w-40 h-0.5 bg-gold" aria-hidden />
         </div>

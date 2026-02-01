@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Catalogs | QFurniture",
+  title: "Catalogs | Quality Furniture Ltd",
   description: "Download our product catalogs and brochures.",
 };
 

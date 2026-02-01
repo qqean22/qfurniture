@@ -3,7 +3,7 @@ import { getCategories, getProducts } from "@/lib/data";
 import { ProductCard } from "@/components/ProductCard";
 
 export const metadata = {
-  title: "Chairs | QFurniture",
+  title: "Chairs | Quality Furniture Ltd",
   description: "Chairs combine everyday comfort with elegant design. From cozy corners to stylish dining areas.",
 };
 

@@ -41,6 +41,20 @@ A clone of [Modern Bench](https://modernbench.co.uk) structure and functionality
 
 Without Supabase configured, the app still runs using fallback (static) data so you can browse the structure.
 
+4. **Social links (Facebook, Instagram, TikTok)**
+
+   To replace placeholder social links, edit **`src/lib/site-config.ts`** and set your profile URLs:
+
+   ```ts
+   export const SOCIAL_LINKS = {
+     facebook: "https://www.facebook.com/your-page",
+     instagram: "https://www.instagram.com/your-account",
+     tiktok: "https://www.tiktok.com/@your-account",
+   };
+   ```
+
+   Use full URLs including `https://`. Use `"#"` for any platform you don’t use yet.
+
 ## Data tree (mirroring Modern Bench)
 
 - **Categories**: Chairs → Bar Stools, Metal Chairs, Wooden Chair; Tables; Table Legs; Seating → Banquette Seating, Bench Seating, Chesterfield Seating, Back to Back Seating
