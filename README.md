@@ -47,9 +47,9 @@ Without Supabase configured, the app still runs using fallback (static) data so 
 
    ```ts
    export const SOCIAL_LINKS = {
-     facebook: "https://www.facebook.com/your-page",
-     instagram: "https://www.instagram.com/your-account",
-     tiktok: "https://www.tiktok.com/@your-account",
+     facebook: "https://www.facebook.com/p/Quality-furniture-Ltd-61551554537617/",
+     instagram: "https://www.instagram.com/quality_furniture_ltd_uk",
+     tiktok: "https://www.tiktok.com/@qualityfurnitureltd",
    };
    ```
 

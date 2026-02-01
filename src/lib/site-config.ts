@@ -20,7 +20,7 @@ export const SITE = {
  * Use "#" if you don't have a profile yet (link will do nothing).
  */
 export const SOCIAL_LINKS = {
-  facebook: "#",
-  instagram: "#",
-  tiktok: "#",
+  facebook: "https://www.facebook.com/p/Quality-furniture-Ltd-61551554537617/",
+  instagram: "https://www.instagram.com/quality_furniture_ltd_uk",
+  tiktok: "https://www.tiktok.com/@qualityfurnitureltd",
 } as const;
