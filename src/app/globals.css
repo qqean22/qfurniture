@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #1a1a1a;
+  --background: #ffffff;
+  --accent: #234652;
+  --teal: #234652;
+  --gold: #c9a227;
+  --cream: #faf8f5;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Projects gallery – justified layout polish */
+.projects-gallery img {
+  @apply rounded-md object-cover cursor-pointer transition-opacity hover:opacity-95;
+}
