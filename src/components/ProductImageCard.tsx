@@ -10,7 +10,7 @@ export function ProductImageCard({ href, imageUrl, alt }: ProductImageCardProps)
   return (
     <Link
       href={href}
-      className="group block relative aspect-[4/3] overflow-hidden bg-gray-200"
+      className="group block relative aspect-[4/3] overflow-hidden bg-stone-200"
     >
       <img
         src={imageUrl}

@@ -65,7 +65,7 @@ function HeaderSearch() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search for products"
-        className="flex-1 h-10 px-4 border border-gray-300 bg-white text-primary text-sm placeholder:text-gray-500 focus:outline-none focus:border-gold"
+        className="flex-1 h-10 px-4 border border-stone-300 bg-white text-primary text-sm placeholder:text-stone-500 focus:outline-none focus:border-gold"
       />
       <button
         type="submit"
@@ -130,7 +130,7 @@ export function Header() {
     <>
       <header className="sticky top-0 z-50 bg-white">
         {/* Top bar: logo | search | support */}
-        <div className="border-b border-gray-200">
+        <div className="border-b border-stone-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 py-4 lg:py-3">
               <div className="flex items-center justify-between lg:justify-start">

@@ -27,7 +27,7 @@ export default async function ChairsSubcategoryPage({ params }: PageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <nav className="text-sm text-gray-500 mb-4">
+      <nav className="text-sm text-stone-500 mb-4">
         <Link href="/chairs" className="hover:text-gold transition-colors">Chairs</Link>
         <span className="mx-2">/</span>
         <span className="text-primary">{cat.name}</span>
@@ -39,7 +39,7 @@ export default async function ChairsSubcategoryPage({ params }: PageProps) {
         ))}
       </div>
       {allProducts.length === 0 && (
-        <p className="text-gray-500">No products in this category yet.</p>
+        <p className="text-stone-500">No products in this category yet.</p>
       )}
     </div>
   );

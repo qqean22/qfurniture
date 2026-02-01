@@ -19,18 +19,18 @@ export default async function ChairsPage() {
       <h1 className="text-3xl font-bold text-primary mb-4">Chairs</h1>
       {chairSubcats.length > 0 && (
         <div className="flex flex-wrap gap-4 mb-8">
-          <span className="text-gray-600">Categories:</span>
-          <Link href="/chairs" className="px-3 py-1 rounded bg-teal text-white text-sm font-medium hover:bg-teal-light transition-colors">
+          <span className="text-stone-600">Categories:</span>
+          <Link href="/chairs" className="px-3 py-1 bg-teal text-white text-sm font-medium hover:bg-teal-light transition-colors">
             All Chairs
           </Link>
           {chairSubcats.map((c) => (
-            <Link key={c.id} href={`/chairs/${c.slug}`} className="px-3 py-1 rounded bg-gray-100 text-gray-700 text-sm hover:bg-gray-200">
+            <Link key={c.id} href={`/chairs/${c.slug}`} className="px-3 py-1 bg-stone-100 text-stone-700 text-sm hover:bg-stone-200">
               {c.name}
             </Link>
           ))}
         </div>
       )}
-      <p className="text-gray-600 mb-8 max-w-2xl">
+      <p className="text-stone-600 mb-8 max-w-2xl">
         Chairs combine everyday comfort with elegant design, enhancing homes, offices, and lounges. From cozy corners to stylish dining areas, they create a welcoming atmosphere, blending functionality with aesthetic appeal. Perfect for any setting, they offer relaxation, versatility, and a touch of sophistication inside and out.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -39,7 +39,7 @@ export default async function ChairsPage() {
         ))}
       </div>
       {products.length === 0 && (
-        <p className="text-gray-500">No chairs found. Add products in Supabase or connect your database.</p>
+        <p className="text-stone-500">No chairs found. Add products in Supabase or connect your database.</p>
       )}
     </div>
   );

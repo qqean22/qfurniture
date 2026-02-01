@@ -36,14 +36,14 @@ export function VenueTypeCard({ name, slug }: VenueTypeCardProps) {
   return (
     <Link
       href={`/venue/${slug}`}
-      className="group block relative aspect-[4/3] sm:aspect-[3/4] overflow-hidden bg-gray-200"
+      className="group block relative aspect-[4/3] sm:aspect-[3/4] overflow-hidden bg-stone-200"
     >
       <img
         src={imageUrl}
         alt={name}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-black/40 group-hover:bg-teal/30 transition-colors" aria-hidden />
+      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" aria-hidden />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
         <span className="flex items-center justify-center mb-3" aria-hidden>{icon}</span>
         <span className="text-white font-bold text-lg sm:text-xl uppercase tracking-wide drop-shadow-md">

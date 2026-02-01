@@ -43,7 +43,7 @@ export default async function SeatingPage({ params }: PageProps) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <nav className="text-sm text-gray-500 mb-4">
+      <nav className="text-sm text-stone-500 mb-4">
         <Link href="/" className="hover:text-gold transition-colors">Home</Link>
         <span className="mx-2">/</span>
         <span className="text-primary">Seating</span>
@@ -51,9 +51,9 @@ export default async function SeatingPage({ params }: PageProps) {
         <span className="text-primary">{title}</span>
       </nav>
       <h1 className="text-3xl font-bold text-primary mb-6">{title}</h1>
-      <p className="text-gray-700 leading-relaxed">{description}</p>
+      <p className="text-stone-700 leading-relaxed">{description}</p>
       <div className="mt-8">
-        <Link href="/#contact" className="inline-block px-6 py-3 bg-gold text-primary rounded-lg hover:bg-gold-light font-medium transition-colors">
+        <Link href="/#contact" className="inline-block px-6 py-3 bg-gold text-primary hover:bg-gold-light font-medium transition-colors">
           Contact us for a quote
         </Link>
       </div>

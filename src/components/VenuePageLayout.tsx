@@ -64,7 +64,7 @@ export function VenuePageLayout({
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-2">
-            <div className="aspect-[4/3] bg-teal/10 overflow-hidden">
+            <div className="aspect-[4/3] bg-warm overflow-hidden">
               {imageUrl ? (
                 <img
                   src={imageUrl}
@@ -72,7 +72,7 @@ export function VenuePageLayout({
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm uppercase tracking-wide">
+                <div className="w-full h-full flex items-center justify-center text-stone-400 text-sm uppercase tracking-wide">
                   {imagePlaceholder}
                 </div>
               )}
@@ -84,7 +84,7 @@ export function VenuePageLayout({
                 {tagline}
               </h2>
             )}
-            <p className="text-gray-700 leading-relaxed text-lg">{intro}</p>
+            <p className="text-stone-700 leading-relaxed text-lg">{intro}</p>
           </div>
         </div>
       </section>
@@ -99,19 +99,19 @@ export function VenuePageLayout({
               </h2>
             )}
             {mainBody && (
-              <p className="text-gray-700 leading-relaxed text-lg mb-6 max-w-4xl">
+              <p className="text-stone-700 leading-relaxed text-lg mb-6 max-w-4xl">
                 {mainBody}
               </p>
             )}
             {bullets.length > 0 && (
-              <ul className="list-disc list-inside text-gray-700 space-y-2 text-lg mb-6 max-w-2xl">
+              <ul className="list-disc list-inside text-stone-700 space-y-2 text-lg mb-6 max-w-2xl">
                 {bullets.map((b, i) => (
                   <li key={i}>{b}</li>
                 ))}
               </ul>
             )}
             {mainBodyAfter && (
-              <p className="text-gray-700 leading-relaxed text-lg max-w-4xl">
+              <p className="text-stone-700 leading-relaxed text-lg max-w-4xl">
                 {mainBodyAfter}
               </p>
             )}
@@ -121,7 +121,7 @@ export function VenuePageLayout({
 
       {/* Full-width image banner placeholder (between main and sections) */}
       <section className="w-full py-0">
-        <div className="aspect-[21/9] max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-teal/5 flex items-center justify-center text-gray-400 text-sm uppercase tracking-wide">
+        <div className="aspect-[21/9] max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-warm-light flex items-center justify-center text-stone-400 text-sm uppercase tracking-wide">
           Banner image
         </div>
       </section>
@@ -140,7 +140,7 @@ export function VenuePageLayout({
             >
               {sec.imagePlacement === "left" && (
                 <div className="lg:col-span-2 order-2 lg:order-1">
-                  <div className="aspect-[4/3] bg-teal/10 flex items-center justify-center text-gray-400 text-sm uppercase">
+                  <div className="aspect-[4/3] bg-warm flex items-center justify-center text-stone-400 text-sm uppercase">
                     Image
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export function VenuePageLayout({
                 <h3 className="text-xl font-bold text-primary uppercase tracking-tight mb-4">
                   {sec.heading}
                 </h3>
-                <div className="text-gray-700 leading-relaxed space-y-4 prose prose-gray max-w-none">
+                <div className="text-stone-700 leading-relaxed space-y-4 prose prose-stone max-w-none">
                   {sec.body.split("\n\n").map((p, j) => (
                     <p key={j}>{p}</p>
                   ))}
@@ -163,7 +163,7 @@ export function VenuePageLayout({
               </div>
               {sec.imagePlacement === "right" && (
                 <div className="lg:col-span-2 order-2 lg:order-2">
-                  <div className="aspect-[4/3] bg-teal/10 flex items-center justify-center text-gray-400 text-sm uppercase">
+                  <div className="aspect-[4/3] bg-warm flex items-center justify-center text-stone-400 text-sm uppercase">
                     Image
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export function VenuePageLayout({
 
       {/* Our Previous Projects – image gallery */}
       {showGallery && (
-        <section className="py-12 lg:py-16 bg-teal/5">
+        <section className="py-12 lg:py-16 bg-warm-light">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-primary uppercase tracking-tight mb-8">
               Our Previous Projects
@@ -184,7 +184,7 @@ export function VenuePageLayout({
               {[1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
-                  className="aspect-[4/3] bg-teal/10 flex items-center justify-center text-gray-400 text-sm uppercase tracking-wide"
+                  className="aspect-[4/3] bg-warm flex items-center justify-center text-stone-400 text-sm uppercase tracking-wide"
                 >
                   Project {i}
                 </div>
@@ -196,7 +196,7 @@ export function VenuePageLayout({
 
       {/* CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <p className="text-gray-600 text-sm mb-6">
+        <p className="text-stone-600 text-sm mb-6">
           We have an impressive client portfolio and are happy to provide further
           references upon request or visiting our factory and showroom to see our
           products and production process.

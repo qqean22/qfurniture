@@ -43,7 +43,7 @@ export function SearchBar({ onClose }: SearchBarProps) {
 
   return (
     <div className="fixed inset-0 z-[100] bg-black/50 flex items-start justify-center pt-20 px-4">
-      <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[80vh] flex flex-col">
+      <div className="bg-white  shadow-xl w-full max-w-2xl max-h-[80vh] flex flex-col">
         <form onSubmit={handleSubmit} className="p-4 border-b flex gap-2">
           <input
             type="search"
@@ -53,22 +53,22 @@ export function SearchBar({ onClose }: SearchBarProps) {
               doSearch(e.target.value);
             }}
             placeholder="Search products..."
-            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+            className="flex-1 px-4 py-3 border border-stone-300  focus:ring-2 focus:ring-accent focus:border-transparent"
             autoFocus
           />
-          <button type="submit" className="px-4 py-3 bg-gold text-primary rounded-lg hover:bg-gold-light font-medium">
+          <button type="submit" className="px-4 py-3 bg-gold text-primary  hover:bg-gold-light font-medium">
             Search
           </button>
-          <button type="button" onClick={onClose} className="px-4 py-3 text-gray-600 hover:bg-gray-100 rounded-lg">
+          <button type="button" onClick={onClose} className="px-4 py-3 text-stone-600 hover:bg-stone-100 ">
             Close
           </button>
         </form>
         <div className="overflow-auto flex-1 p-4">
-          {loading && <p className="text-gray-500">Searching...</p>}
+          {loading && <p className="text-stone-500">Searching...</p>}
           {!loading && searched && query.trim() && (
             <>
               {results.length === 0 ? (
-                <p className="text-gray-500">No products found. Try a different search.</p>
+                <p className="text-stone-500">No products found. Try a different search.</p>
               ) : (
                 <ul className="space-y-2">
                   {results.slice(0, 10).map((product) => (
@@ -76,11 +76,11 @@ export function SearchBar({ onClose }: SearchBarProps) {
                       <Link
                         href={`/products/${product.slug}`}
                         onClick={onClose}
-                        className="block p-3 rounded hover:bg-gray-50 border border-transparent hover:border-gray-200"
+                        className="block p-3 hover:bg-stone-50 border border-transparent hover:border-stone-200"
                       >
                         <span className="font-medium">{product.name}</span>
                         {product.short_description && (
-                          <span className="text-sm text-gray-500 block mt-1">{product.short_description}</span>
+                          <span className="text-sm text-stone-500 block mt-1">{product.short_description}</span>
                         )}
                         {product.price != null && (
                           <span className="text-sm text-gold font-medium">£{product.price.toFixed(2)}</span>

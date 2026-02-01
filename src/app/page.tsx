@@ -28,25 +28,42 @@ export default async function HomePage() {
 
   return (
     <div>
-      {/* Hero section – background: hero-i.jpg */}
+      {/* Hero – compact, sleek; more image visible */}
       <section
-        className="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center bg-no-repeat"
+        className="relative min-h-[75vh] flex flex-col items-center justify-center text-center px-4 py-16 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.4) 100%), url(${heroImage.src})`,
+          backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.45) 100%), url(${heroImage.src})`,
         }}
       >
         <div className="absolute inset-0 bg-black/25" aria-hidden />
-        <div className="relative z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight text-white drop-shadow-md">
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-white drop-shadow-md">
             Quality Furniture Ltd
           </h1>
-          <div className="mt-4 mx-auto w-40 h-0.5 bg-gold" aria-hidden />
+          <p className="mt-3 text-sm sm:text-base text-white/90 font-medium drop-shadow-sm max-w-xl mx-auto">
+            Bespoke seating & contract furniture for hospitality, commercial and residential. Made to measure in the UK.
+          </p>
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href="#contact"
+              className="w-auto inline-flex items-center justify-center px-5 py-2.5 bg-gold text-primary font-semibold uppercase tracking-wide text-xs hover:bg-gold-light transition-colors"
+            >
+              Request a Quote
+            </a>
+            <Link
+              href="/projects"
+              className="w-auto inline-flex items-center justify-center px-5 py-2.5 border border-white text-white font-semibold uppercase tracking-wide text-xs hover:bg-white hover:text-primary transition-colors"
+            >
+              View Our Projects
+            </Link>
+          </div>
+          <div className="mt-4 mx-auto w-16 h-px bg-gold" aria-hidden />
         </div>
       </section>
 
       {/* Trust bar */}
-      <section className="bg-teal/10 border-b border-teal/20 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-6 text-sm text-teal">
+      <section className="bg-warm border-b border-stone-200 py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-6 text-sm text-primary/80">
           <span className="font-medium">Trusted by Thousands</span>
           <span>Excellent Customer Support</span>
           <span>12 Months Warranty</span>
@@ -68,7 +85,7 @@ export default async function HomePage() {
       </section>
 
       {/* Our Projects – reference: centered header, accent line, four image cards */}
-      <section className="py-12 lg:py-16 bg-teal/5">
+      <section className="py-12 lg:py-16 bg-warm-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader title="Our Projects" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
@@ -83,10 +100,10 @@ export default async function HomePage() {
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-primary mb-6 uppercase tracking-tight">Quality Furniture Ltd</h2>
-          <p className="max-w-3xl text-gray-700 leading-relaxed mb-6">
+          <p className="max-w-3xl text-stone-700 leading-relaxed mb-6">
             Quality Furniture Ltd is a furniture maker in Perivale, England. We design and manufacture made-to-measure contract furniture from our premises in Greenford, offering a nationwide service and all types of restaurant booths, benches, and upholstered seating solutions for commercial, hospitality, and residential clients.
           </p>
-          <p className="max-w-3xl text-gray-700 leading-relaxed mb-8">
+          <p className="max-w-3xl text-stone-700 leading-relaxed mb-8">
             We are one of the UK leading manufacturers of contract seating and restaurant bespoke furniture for the hospitality, leisure and retail sectors. Our team has over 25 years of experience and will work with many upholstery designers for your restaurants at your exact specifications, no matter where you are in the UK.
           </p>
           <ul className="flex flex-wrap gap-4 text-sm text-teal mb-8">
@@ -101,11 +118,11 @@ export default async function HomePage() {
       </section>
 
       {/* Inspiration products */}
-      <section className="py-12 lg:py-16 bg-teal/5">
+      <section className="py-12 lg:py-16 bg-warm-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-2 uppercase tracking-tight">Inspiration Products</h2>
           <div className="h-0.5 w-16 bg-gold mt-2 mb-8" aria-hidden />
-          <p className="text-gray-600 mb-8">Discover our range of stylish and functional furniture.</p>
+          <p className="text-stone-600 mb-8">Discover our range of stylish and functional furniture.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
@@ -129,9 +146,9 @@ export default async function HomePage() {
               <Link
                 key={cat.id}
                 href={`/seating/${cat.slug}`}
-                className="group block p-6 border border-gray-200 bg-white hover:border-gold hover:shadow-lg transition-all text-center"
+                className="group block p-6 border border-stone-200 bg-white hover:border-gold hover:shadow-lg transition-all text-center"
               >
-                <div className="w-16 h-16 mx-auto mb-3 bg-teal/10 group-hover:bg-teal/15 flex items-center justify-center rounded">
+                <div className="w-16 h-16 mx-auto mb-3 bg-warm group-hover:bg-gold/10 flex items-center justify-center">
                   <span className="text-xl font-bold text-teal">{cat.name.charAt(0)}</span>
                 </div>
                 <h3 className="font-semibold text-primary group-hover:text-teal uppercase tracking-wide">{cat.name}</h3>
@@ -143,7 +160,7 @@ export default async function HomePage() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-12 lg:py-16 bg-teal/5">
+      <section id="contact" className="py-12 lg:py-16 bg-warm-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -152,15 +169,15 @@ export default async function HomePage() {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-primary mb-4 uppercase tracking-tight">Contact information</h2>
-              <address className="not-italic text-gray-700 space-y-3">
+              <address className="not-italic text-stone-700 space-y-3">
                 <p>Unit 4, Middlesex<br />Perivale, Greenford UB6 7JD</p>
                 <p><a href="tel:07599173535" className="text-teal hover:text-gold transition-colors">07599 173535</a></p>
-                <p className="text-sm text-gray-600">Open · Mon-Thu 10am - 7 pm, Saturday/Sunday 9am - 6pm, 
+                <p className="text-sm text-stone-600">Open · Mon-Thu 10am - 7 pm, Saturday/Sunday 9am - 6pm, 
 Friday CLOSED</p>
                 <p><a href="mailto:info@qualityfurniture.co.uk" className="text-teal hover:text-gold transition-colors">info@qualityfurniture.co.uk</a></p>
                 <p><a href="mailto:support@qualityfurniture.co.uk" className="text-teal hover:text-gold transition-colors">support@qualityfurniture.co.uk</a></p>
               </address>
-              <p className="mt-6 text-gray-600 text-sm">
+              <p className="mt-6 text-stone-600 text-sm">
                 Do you have questions about how we can help your company? Send us an email and we&apos;ll get in touch shortly.
               </p>
             </div>

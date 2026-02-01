@@ -30,20 +30,20 @@ export default function ProjectsPage() {
           Our Projects
         </h1>
         <div className="h-0.5 w-16 bg-gold mb-6" aria-hidden />
-        <p className="text-gray-600 max-w-2xl text-lg">
+        <p className="text-stone-600 max-w-2xl text-lg">
           We have a vast past project portfolio and are happy to provide references upon request. Our team has worked with many venues nationwide, from large international chains to single installations.
         </p>
-        <p className="text-gray-600 max-w-2xl mt-4">
+        <p className="text-stone-600 max-w-2xl mt-4">
           Contact us to discuss your project or to view our showroom and production process.
         </p>
       </div>
 
       <ProjectsGallery photos={PROJECT_PHOTOS} />
 
-      <div className="mt-12 pt-8 border-t border-gray-200">
+      <div className="mt-12 pt-8 border-t border-stone-200">
         <a
           href="/#contact"
-          className="inline-block px-6 py-3 bg-gold text-primary rounded-lg hover:bg-gold-light font-medium uppercase tracking-wide text-sm transition-colors"
+          className="inline-block px-6 py-3 bg-gold text-primary hover:bg-gold-light font-medium uppercase tracking-wide text-sm transition-colors"
         >
           Contact us
         </a>

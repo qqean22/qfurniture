@@ -15,9 +15,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h1 className="text-3xl font-bold text-primary mb-6">Search</h1>
       {!query ? (
-        <p className="text-gray-600">Enter a search term in the header to find products.</p>
+        <p className="text-stone-600">Enter a search term in the header to find products.</p>
       ) : (
-        <Suspense fallback={<p className="text-gray-500">Searching...</p>}>
+        <Suspense fallback={<p className="text-stone-500">Searching...</p>}>
           <SearchResults query={query} />
         </Suspense>
       )}
@@ -30,7 +30,7 @@ async function SearchResults({ query }: { query: string }) {
 
   return (
     <>
-      <p className="text-gray-600 mb-8">
+      <p className="text-stone-600 mb-8">
         {products.length === 0
           ? `No products found for "${query}".`
           : `Found ${products.length} result${products.length === 1 ? "" : "s"} for "${query}".`}
