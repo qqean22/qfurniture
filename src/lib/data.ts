@@ -79,7 +79,7 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
 
 export async function searchProducts(q: string): Promise<Product[]> {
   if (!q.trim()) return [];
-  if (!hasSupabase()) return getFallbackProducts().then((list) => list.filter((p) => p.name.toLowerCase().includes(q.toLowerCase())));
+  if (!hasSupabase()) return getFallbackProducts().filter((p) => p.name.toLowerCase().includes(q.toLowerCase()));
   const { data, error } = await supabase
     .from("products")
     .select("*, category:categories(*)")

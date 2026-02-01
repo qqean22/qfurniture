@@ -35,14 +35,13 @@ export function ProjectsGallery({ photos }: ProjectsGalleryProps) {
     <div className="projects-gallery">
       <RowsPhotoAlbum
         photos={photos}
-        layout="rows"
         targetRowHeight={280}
         spacing={12}
         padding={4}
         onClick={openLightbox}
         rowConstraints={{ maxPhotos: 4, minPhotos: 1 }}
         componentsProps={{
-          containerProps: {
+          container: {
             style: { marginBottom: 0 },
           },
         }}
