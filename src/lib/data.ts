@@ -6,7 +6,7 @@ const hasSupabase = () =>
   process.env.NEXT_PUBLIC_SUPABASE_URL.length > 0;
 
 export async function getCategories(): Promise<Category[]> {
-  if (!hasSupabase()) return getFallbackCategories();
+  if (!hasSupabase() || !supabase) return getFallbackCategories();
   const { data, error } = await supabase
     .from("categories")
     .select("*")
@@ -26,7 +26,7 @@ export async function getCategoriesTree(): Promise<Category[]> {
 }
 
 export async function getVenueTypes(): Promise<VenueType[]> {
-  if (!hasSupabase()) return getFallbackVenueTypes();
+  if (!hasSupabase() || !supabase) return getFallbackVenueTypes();
   const { data, error } = await supabase
     .from("venue_types")
     .select("*")
@@ -41,7 +41,7 @@ export async function getProducts(options?: {
   venueSlug?: string;
   limit?: number;
 }): Promise<Product[]> {
-  if (!hasSupabase()) return getFallbackProducts(options?.categorySlug);
+  if (!hasSupabase() || !supabase) return getFallbackProducts(options?.categorySlug);
   let query = supabase.from("products").select("*, category:categories(*)");
   if (options?.categorySlug) {
     const { data: cat } = await supabase
@@ -67,7 +67,7 @@ export async function getProducts(options?: {
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
-  if (!hasSupabase()) return getFallbackProductBySlug(slug);
+  if (!hasSupabase() || !supabase) return getFallbackProductBySlug(slug);
   const { data, error } = await supabase
     .from("products")
     .select("*, category:categories(*)")
@@ -79,7 +79,7 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
 
 export async function searchProducts(q: string): Promise<Product[]> {
   if (!q.trim()) return [];
-  if (!hasSupabase()) return getFallbackProducts().filter((p) => p.name.toLowerCase().includes(q.toLowerCase()));
+  if (!hasSupabase() || !supabase) return getFallbackProducts().filter((p) => p.name.toLowerCase().includes(q.toLowerCase()));
   const { data, error } = await supabase
     .from("products")
     .select("*, category:categories(*)")
